@@ -1,22 +1,6 @@
 {
   "users": [
     {
-      "id": 1,
-      "firstName": "json-server",
-      "lastName": "typicode",
-      "email": "typicode",
-      "department": "typicode",
-      "password": "monkey"
-    },
-    {
-      "id": "2",
-      "firstName": "Ola",
-      "lastName": "Ekpe",
-      "email": "ola.hr",
-      "department": "HR",
-      "password": "oijhgfdsdf"
-    },
-    {
       "firstName": "me",
       "lastName": "you",
       "email": "forever",
