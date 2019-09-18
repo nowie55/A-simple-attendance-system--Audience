@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "json-server",
+      "lastName": "typicode",
+      "email": "typicode",
+      "department": "typicode",
+      "password": "monkey"
+    },
+    {
+      "id": "2",
+      "firstName": "Ola",
+      "lastName": "Ekpe",
+      "email": "ola.hr",
+      "department": "HR",
+      "password": "oijhgfdsdf"
+    },
+    {
+      "firstName": "me",
+      "lastName": "you",
+      "email": "forever",
+      "department": "together",
+      "password": "stucklove",
+      "id": "wlbhZoM"
+    },
+    {
+      "firstName": "simon",
+      "lastName": "Ekpe",
+      "email": "passionate",
+      "department": "Middle guy",
+      "password": "wertyu8i9",
+      "id": "cj6P42k"
+    },
+    {
+      "firstName": "Tobenna",
+      "lastName": "Ify",
+      "email": "tobe@g.com",
+      "department": "Computer Science",
+      "password": "tobenna",
+      "id": "swsSuq4"
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "firstName": "json-server",
+      "lastName": "typicode",
+      "email": "typicode",
+      "department": "typicode"
+    }
+  ]
+}

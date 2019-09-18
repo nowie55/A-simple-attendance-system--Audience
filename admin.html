@@ -1,90 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href = "bootstrap/css/bootstrap.css">
-    <script src="bootstrap/css/bootstrap.min.css"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <script src="bootstrap/css/bootstrap.min.css"></script>
+  <script src="js/admin.js"></script>
 
 
-   
-    <title>Document</title>
+
+  <title>Document</title>
 </head>
-<body>
-        <div class="modal fade"  id="employeeModal" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title">Create new employee</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                            <form>
-                                <div class="form-group">
-                                     <label for="exampleFormControlInput1">First Name</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="First name">
-                                 </div>
-                                 <div class="form-group">
-                                        <label for="exampleFormControlInput1">Last Name</label>
-                                       <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Last name">
-                                    </div>
-                                    <div class="form-group">
-                                            <label for="exampleFormControlInput1">Email</label>
-                                           <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Email">
-                                        </div>
-                                        <div class="form-group">
-                                                <label for="exampleFormControlInput1">Department</label>
-                                               <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Department">
-                                            </div>
-                         </form>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">Cancel</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 table-responsiveness">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#employeeModal">
-                            Add New Employee
-                          </button>
-                <table class="table table-striped">
-                    <tr>
-                        <td>Employee Id</td>
-                        <td>First Name</td>
-                        <td>Last Name</td>
-                        <td>Email</td>
-                        <td>Department</td>
-                        <td>Action</td>
-                    </tr>
-                    <tr>
-                            <td>1</td>
-                            <td>elvis</td>
-                            <td>Eche</td>
-                            <td>elvis@@gmail.com</td>
-                            <td>Tech</td>
-                            <td>
-                                <button class="btn btn-sm btn-primary"  data-toggle="modal" data-target="#employeeModal">Edit</button>
-                                <button class="btn btn-sm btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                </table>
-            </div>
+
+<body onLoad="load()">
+
+  <div class="modal fade" id="employeeModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Update Employee</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="First name">
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="Last name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text" class="form-control" id="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="department">Department</label>
+              <input type="text" class="form-control" id="department" placeholder="Department">
+            </div>
+          </form>
+        </div>
+        <form class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" onClick= "create()">Save changes</button>
+        </form>
+
+        
+
+      </div>
     </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 table-responsiveness">
+        <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#employeeModal">
+          Create New Employee
+        </button>
+      </div>
 
-    <script src="bootstrap/jquery.js"></script>
-    <script src="bootstrap/js/bootstrap.bundle.js"></script>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="bootstrap/js/bootstrap.js"></script>
+      <!-- <form class="form-inline ml-auto">
+        <div class="md-form my-0">
+          <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        </div>
+        <button href="#!" class="btn btn-outline-white btn-md my-0 ml-sm-2" type="submit">Search</button>
+      </form> -->
 
-    <script src="js/adminLogin.js"></script>
-    
+      <table class="table table-striped">
+        <tr>
+          <td>Employee Id</td>
+          <td>First Name</td>
+          <td>Last Name</td>
+          <td>Email</td>
+          <td>Department</td>
+          <td>Action</td>
+        </tr>
+        <tbody id="body"></tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+
+
+             <script src="bootstrap/jquery.js"></script>
+              <script src="bootstrap/js/bootstrap.bundle.js"></script>
+              <script src="bootstrap/js/bootstrap.js"></script>
+              <script src="js/admin.js"></script>
+
 </body>
+
 </html>
