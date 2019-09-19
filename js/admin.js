@@ -10,6 +10,7 @@ function create() {
     populateTable(users);    
 }
 
+
 $('.employee-table').on('click', '.delete', function() {
     var $this = $(this);
     var id = $this.parent().siblings('.row-id');
@@ -19,10 +20,30 @@ $('.employee-table').on('click', '.delete', function() {
         url: 'http://localhost:3000/users/' + idValue,
         success: function(result) {
             console.log(result);
+            location.reload();
         }
     })
     alert('Employee with id ' + idValue + ' deleted');
 })
+
+$('.employee-table').on('change', '.attendance-box', function() {
+    var $this = $(this);
+    var id = $this.parent().siblings('.row-id');
+    var idValue = id.text();
+    var state = $this.is(':checked');
+
+    $.getJSON('http://localhost:3000/users/' + idValue, function(data) {
+        data.attendance = state;
+        $.ajax({
+            method: 'PUT',
+            url: 'http://localhost:3000/users/' + idValue,
+            data: data,
+            success: function(result) {
+                alert('Attendance updated');
+            }
+        });
+    });
+});
 
 
 
@@ -55,8 +76,8 @@ $('.employee-table').on('click', '.delete', function() {
                                                <td>${data[i]['lastName']}</td>
                                                <td>${data[i]['email']}</td>
                                                <td>${data[i]['department']}</td>
+                                               <td><input type="checkbox" class="attendance-box" ${data[i]['attendance'] == 'true'?'checked':''} /></td>
                                                <td>
-                                               <button class="btn btn-sm btn-primary" data-toggle="modal"onClick="eno()" data-target="#employeeModal">Edit</button>
                                                <button class="btn btn-sm btn-danger delete">Delete</button>
                                              </td> 
                                                 </tr>`;

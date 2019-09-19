@@ -1,28 +1,31 @@
 {
   "users": [
     {
-      "firstName": "me",
-      "lastName": "you",
-      "email": "forever",
-      "department": "together",
-      "password": "stucklove",
-      "id": "wlbhZoM"
+      "password": "a",
+      "firstName": "bew",
+      "lastName": "ew",
+      "email": "ewew",
+      "department": "ewew",
+      "attendance": "true",
+      "id": "v3dsaMK"
     },
     {
-      "firstName": "simon",
+      "password": "a",
+      "firstName": "Eno",
       "lastName": "Ekpe",
-      "email": "passionate",
-      "department": "Middle guy",
-      "password": "wertyu8i9",
-      "id": "cj6P42k"
+      "email": "nowieluv.2010@ymail.com",
+      "department": "IT",
+      "attendance": "true",
+      "id": "ltPZebx"
     },
     {
-      "firstName": "Tobenna",
-      "lastName": "Ify",
-      "email": "tobe@g.com",
-      "department": "Computer Science",
-      "password": "tobenna",
-      "id": "swsSuq4"
+      "password": "a",
+      "firstName": "Eno",
+      "lastName": "you",
+      "email": "nowieluv.2010@ymail.com",
+      "department": "together",
+      "attendance": "true",
+      "id": "dzUV_3x"
     }
   ],
   "admin": [
@@ -32,6 +35,30 @@
       "lastName": "typicode",
       "email": "typicode",
       "department": "typicode"
+    },
+    {
+      "firstName": "fire",
+      "lastName": "fire",
+      "email": "fire",
+      "department": "fire",
+      "password": "fire",
+      "id": 2
+    },
+    {
+      "firstName": "Eno",
+      "lastName": "Ekpe",
+      "email": "nowieluv.2010@ymail.com",
+      "department": "IT",
+      "password": "",
+      "id": 3
+    },
+    {
+      "firstName": "Eno",
+      "lastName": "Ekpe",
+      "email": "asdfg",
+      "department": "HR",
+      "password": "asdfg",
+      "id": 4
     }
   ]
 }

@@ -14,7 +14,7 @@
 
 
 $(document).ready(function() {
-    $.get("http://localhost:3000/users", function(data, status) {
+    $.get("http://localhost:3000/admin", function(data, status) {
 
         $('.login').click(function() {
             let a = $("#email").val();
@@ -33,7 +33,7 @@ $(document).ready(function() {
             let department= $("#department").val();
             let password= $("#password1").val();
 
-            $.post("http://localhost:3000/users", { firstName, lastName, email, department, password}, function(data, status) {
+            $.post("http://localhost:3000/admin", { firstName, lastName, email, department, password}, function(data, status) {
                 window.location.assign("/index.html");
                 alert("Signup successful, please login");
             });
