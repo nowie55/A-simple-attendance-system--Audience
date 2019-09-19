@@ -9,7 +9,23 @@ function create() {
     console.log("firstName, lastName, email, department ", firstName, lastName, email, department);
     populateTable(users);    
 }
+$('#create-employee').click(function() {
+    var firstName = $("#firstName").val();
+    var lastName = $("#lastName").val();
+    var email = $("#email").val();
+    var department = $("#department").val();
 
+    $.ajax({
+        type: 'POST',
+        url: 'http://localhost:3000/users',
+        data: {password: 'a', firstName: firstName, lastName: lastName, email: email, department: department, attendance: false},
+        success: function(result) {
+            alert('New Employee created');
+            location.reload();
+        }
+    })
+    
+})
 
 $('.employee-table').on('click', '.delete', function() {
     var $this = $(this);

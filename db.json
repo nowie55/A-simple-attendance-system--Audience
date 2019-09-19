@@ -2,15 +2,6 @@
   "users": [
     {
       "password": "a",
-      "firstName": "bew",
-      "lastName": "ew",
-      "email": "ewew",
-      "department": "ewew",
-      "attendance": "true",
-      "id": "v3dsaMK"
-    },
-    {
-      "password": "a",
       "firstName": "Eno",
       "lastName": "Ekpe",
       "email": "nowieluv.2010@ymail.com",
@@ -26,6 +17,15 @@
       "department": "together",
       "attendance": "true",
       "id": "dzUV_3x"
+    },
+    {
+      "password": "a",
+      "firstName": "odudu",
+      "lastName": "mumu",
+      "email": "big head",
+      "department": "food",
+      "attendance": "true",
+      "id": "TBeZLNz"
     }
   ],
   "admin": [
