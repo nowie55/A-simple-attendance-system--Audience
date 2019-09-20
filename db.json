@@ -26,38 +26,98 @@
       "department": "food",
       "attendance": "true",
       "id": "TBeZLNz"
+    },
+    {
+      "password": "a",
+      "firstName": "asdfg",
+      "lastName": "",
+      "email": "",
+      "department": "",
+      "attendance": "true",
+      "id": "wd9qCeL"
+    },
+    {
+      "password": "a",
+      "firstName": "s",
+      "lastName": "",
+      "email": "",
+      "department": "",
+      "attendance": "true",
+      "id": "ePtceVH"
+    },
+    {
+      "password": "a",
+      "firstName": "dfgh",
+      "lastName": "fghj",
+      "email": "fghj",
+      "department": "fghj",
+      "attendance": "true",
+      "id": "IX2Aqm1"
+    },
+    {
+      "firstName": "s",
+      "lastName": "sdfgh",
+      "email": "fgjhkl",
+      "department": "Middle guy",
+      "attendance": "true",
+      "id": "5YEhZ3z"
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "department": "",
+      "attendance": "false",
+      "id": "exye6fE"
+    },
+    {
+      "firstName": "sdfg",
+      "lastName": "ijhgfdc",
+      "email": "tgv",
+      "department": "sdcvb",
+      "attendance": "false",
+      "id": "ZFyjq7h"
+    },
+    {
+      "firstName": "asdf",
+      "lastName": "drftgh",
+      "email": "fgh",
+      "department": "",
+      "attendance": "false",
+      "id": "DJraR0b"
     }
   ],
   "admin": [
-    {
-      "id": 1,
-      "firstName": "json-server",
-      "lastName": "typicode",
-      "email": "typicode",
-      "department": "typicode"
-    },
-    {
-      "firstName": "fire",
-      "lastName": "fire",
-      "email": "fire",
-      "department": "fire",
-      "password": "fire",
-      "id": 2
-    },
     {
       "firstName": "Eno",
       "lastName": "Ekpe",
       "email": "nowieluv.2010@ymail.com",
       "department": "IT",
+      "password": "password",
+      "id": 1
+    },
+    {
+      "firstName": "eno",
+      "lastName": "",
+      "email": "",
+      "department": "",
+      "password": "",
+      "id": 2
+    },
+    {
+      "firstName": "dfghjk",
+      "lastName": "",
+      "email": "",
+      "department": "",
       "password": "",
       "id": 3
     },
     {
-      "firstName": "Eno",
-      "lastName": "Ekpe",
-      "email": "asdfg",
-      "department": "HR",
-      "password": "asdfg",
+      "firstName": "sdfg",
+      "lastName": "",
+      "email": "",
+      "department": "",
+      "password": "",
       "id": 4
     }
   ]

@@ -17,11 +17,13 @@ $(document).ready(function() {
     $.get("http://localhost:3000/admin", function(data, status) {
 
         $('.login').click(function() {
-            let a = $("#email").val();
+            let email = $("#email").val();
+            let password= $("#password").val();
             for (i = 0; i < data.length; i++) {
-                    if (a === data[i].email) {
+                    if (email === data[i].email && password === data[i].password) {
                         window.location.assign("/admin.html");
                     }
+                    else {alert('Please fill in the correct email and password');}
             }
         });
 
@@ -33,10 +35,25 @@ $(document).ready(function() {
             let department= $("#department").val();
             let password= $("#password1").val();
 
-            $.post("http://localhost:3000/admin", { firstName, lastName, email, department, password}, function(data, status) {
-                window.location.assign("/index.html");
-                alert("Signup successful, please login");
-            });
+            if(firstName!== "" && lastName!=="" && email !== "" && department !== "" && password !== ""){
+                $.post("http://localhost:3000/admin", { firstName, lastName, email, department, password}, function(data, status) {
+                    window.location.assign("/index.html");
+                    alert("Signup successful, please login");
+                });
+            }
+               else{ alert("Please fill in sll fields")}
+            
+
+           
         });
     })
 })
+
+
+
+
+
+
+
+
+
